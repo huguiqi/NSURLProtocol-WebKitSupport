@@ -8,7 +8,14 @@
 
 #import "WFWebView.h"
 #import "NSHTTPCookie+Utils.h"
+#import "WFSessionManager.h"
 
+
+@interface WFWebView()
+
+@property(nonatomic,readwrite,strong) NSMutableURLRequest *currentReq;
+
+@end
 
 /**
  *  这个类暂时没用到，可以忽略
@@ -28,30 +35,23 @@
 
 
 
-/*!
- *  更新webView的cookie
- */
-- (void)updateWebViewCookie
-{
-    WKUserScript * cookieScript = [[WKUserScript alloc] initWithSource:[self cookieString] injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
-    //添加Cookie
-    [self.configuration.userContentController addUserScript:cookieScript];
+-(id)loadRequest:(NSURLRequest *)request{
     
+    NSMutableURLRequest *req = [request mutableCopy];
+    NSString *cookieValue= [[WFSessionManager instanceManager] readCurrentCookie];
+    if (cookieValue) {
+        //添加在js中操作的对象名称，通过该对象来向web view发送消息
+        WKUserScript * cookieScript = [[WKUserScript alloc]initWithSource:cookieValue   injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
+        [self.configuration.userContentController addUserScript:cookieScript];
+        self.configuration.processPool = [[WKProcessPool alloc] init];
+    }
     
+    [req setHTTPShouldHandleCookies:NO];
+    
+    self.currentReq = req;
+    return [super loadRequest:req];
 }
 
-- (NSString *)cookieString
-{
-    NSMutableString *script = [NSMutableString string];
-    for (NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]) {
-        // Skip cookies that will break our script
-        if ([cookie.value rangeOfString:@"'"].location != NSNotFound) {
-            continue;
-        }
-        // Create a line that appends this cookie to the web view's document's cookies
-        [script appendFormat:@"document.cookie='%@'; \n", cookie.da_javascriptString];
-    }
-    return script;
-}
+
 
 @end

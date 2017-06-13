@@ -25,6 +25,13 @@ To remove the scheme from registery:
 [NSURLProtocol wk_unregisterScheme:@"https"];
 ```
 
+
+# 扩展解决产生的问题
+
+1. 将NSURLConnection 升级为NSURLSession
+2. 解决session共享问题
+3. 解决网页中ajax的post请求丢失body的问题
+
 # Note
 
 This category uses undocumented APIs in WebKit. Use at your own risk.

@@ -10,6 +10,6 @@
 
 @interface WFWebView : WKWebView
 
--(void)updateWebViewCookie;
+
 
 @end

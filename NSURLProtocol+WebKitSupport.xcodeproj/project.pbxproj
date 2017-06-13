@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22910BA91EEF7933006D0B7D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 22910BA81EEF7933006D0B7D /* README.md */; };
+		22910BAD1EEF7ABB006D0B7D /* WFSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22910BAC1EEF7ABB006D0B7D /* WFSessionManager.m */; };
+		22910BB01EEF7C36006D0B7D /* NSString+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 22910BAF1EEF7C36006D0B7D /* NSString+JSON.m */; };
 		2296559C1EE94A4F00606AE8 /* WFWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2296559B1EE94A4F00606AE8 /* WFWebView.m */; };
 		229655A01EE96DD000606AE8 /* NSHTTPCookie+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2296559F1EE96DD000606AE8 /* NSHTTPCookie+Utils.m */; };
 		22F8AB831EEA7F5A000EB9FF /* NSString+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F8AB821EEA7F5A000EB9FF /* NSString+JSON.m */; };
@@ -31,6 +34,11 @@
 
 /* Begin PBXFileReference section */
 		0856B794F912D55A586F7BEF /* libPods-NSURLProtocol+WebKitSupport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSURLProtocol+WebKitSupport.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22910BA81EEF7933006D0B7D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		22910BAB1EEF7ABB006D0B7D /* WFSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFSessionManager.h; sourceTree = "<group>"; };
+		22910BAC1EEF7ABB006D0B7D /* WFSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFSessionManager.m; sourceTree = "<group>"; };
+		22910BAE1EEF7C36006D0B7D /* NSString+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JSON.h"; sourceTree = "<group>"; };
+		22910BAF1EEF7C36006D0B7D /* NSString+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JSON.m"; sourceTree = "<group>"; };
 		2296559A1EE94A4F00606AE8 /* WFWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFWebView.h; sourceTree = "<group>"; };
 		2296559B1EE94A4F00606AE8 /* WFWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFWebView.m; sourceTree = "<group>"; };
 		2296559E1EE96DD000606AE8 /* NSHTTPCookie+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSHTTPCookie+Utils.h"; sourceTree = "<group>"; };
@@ -82,9 +90,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22910BAA1EEF7AB1006D0B7D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				22910BAB1EEF7ABB006D0B7D /* WFSessionManager.h */,
+				22910BAC1EEF7ABB006D0B7D /* WFSessionManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
 		22F8AB841EEAC005000EB9FF /* categary */ = {
 			isa = PBXGroup;
 			children = (
+				22910BAE1EEF7C36006D0B7D /* NSString+JSON.h */,
+				22910BAF1EEF7C36006D0B7D /* NSString+JSON.m */,
 				22F8AB851EEAC005000EB9FF /* NSString+CDEncryption.h */,
 				22F8AB861EEAC005000EB9FF /* NSString+CDEncryption.m */,
 				22F8AB871EEAC005000EB9FF /* NSURLRequest+MutableCopyWorkaround.h */,
@@ -111,6 +130,7 @@
 		3802E0771DACE4C9008B9737 = {
 			isa = PBXGroup;
 			children = (
+				22910BA81EEF7933006D0B7D /* README.md */,
 				3802E0821DACE4C9008B9737 /* NSURLProtocol+WebKitSupport */,
 				3802E09D1DACE54A008B9737 /* Source */,
 				3802E0811DACE4C9008B9737 /* Products */,
@@ -130,6 +150,7 @@
 		3802E0821DACE4C9008B9737 /* NSURLProtocol+WebKitSupport */ = {
 			isa = PBXGroup;
 			children = (
+				22910BAA1EEF7AB1006D0B7D /* Manager */,
 				22F8AB841EEAC005000EB9FF /* categary */,
 				22F8AB891EEAC005000EB9FF /* LoanCacheTool */,
 				3802E0861DACE4C9008B9737 /* AppDelegate.h */,
@@ -320,12 +341,15 @@
 				2296559C1EE94A4F00606AE8 /* WFWebView.m in Sources */,
 				3802E0A01DACE5C5008B9737 /* ReplacingImageURLProtocol.m in Sources */,
 				3802E0A51DACEEF8008B9737 /* RootViewController.m in Sources */,
+				22910BA91EEF7933006D0B7D /* README.md in Sources */,
 				22F8AB831EEA7F5A000EB9FF /* NSString+JSON.m in Sources */,
 				3802E08B1DACE4C9008B9737 /* ViewController.m in Sources */,
 				22F8AB931EEAC005000EB9FF /* NSURLRequest+MutableCopyWorkaround.m in Sources */,
 				3802E0881DACE4C9008B9737 /* AppDelegate.m in Sources */,
 				22F8AB9D1EEB8F33000EB9FF /* Reachability.m in Sources */,
 				229655A01EE96DD000606AE8 /* NSHTTPCookie+Utils.m in Sources */,
+				22910BB01EEF7C36006D0B7D /* NSString+JSON.m in Sources */,
+				22910BAD1EEF7ABB006D0B7D /* WFSessionManager.m in Sources */,
 				3802E0851DACE4C9008B9737 /* main.m in Sources */,
 				22F8AB921EEAC005000EB9FF /* NSString+CDEncryption.m in Sources */,
 				22F8AB971EEAC005000EB9FF /* SCYWebViewCacheModel.m in Sources */,
