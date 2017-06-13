@@ -91,11 +91,6 @@
         config.preferences.javaScriptCanOpenWindowsAutomatically = NO;
         config.processPool = [[WKProcessPool alloc] init];
         
-        //1.2 通过JS与webview内容交互配置
-        config.userContentController = [[WKUserContentController alloc] init];
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-        
-        [config.userContentController addScriptMessageHandler:self name:@"webViewApp"];
         //2.添加WKWebView
         _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, [UIApplication sharedApplication].keyWindow.bounds.size.width, [UIApplication sharedApplication].keyWindow.bounds.size.height) configuration:config];
         _webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth ;
