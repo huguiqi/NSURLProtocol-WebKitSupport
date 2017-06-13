@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ReplacingImageURLProtocol.h"
+#import "SCYCacheURLProtocol.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [NSURLProtocol registerClass:[ReplacingImageURLProtocol class]];
+//    [NSURLProtocol registerClass:[ReplacingImageURLProtocol class]];
+    [NSURLProtocol registerClass:[SCYCacheURLProtocol class]];
     return YES;
 }
 

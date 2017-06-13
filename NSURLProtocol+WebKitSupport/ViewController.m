@@ -8,8 +8,10 @@
 
 #import "ViewController.h"
 #import <WebKit/WebKit.h>
+#import "WFWebView.h"
+#import "NSURLProtocol+WebKitSupport.h"
 
-@interface ViewController ()<WKNavigationDelegate, UIWebViewDelegate>
+@interface ViewController ()<WKNavigationDelegate, UIWebViewDelegate,WKScriptMessageHandler>
 
 @property (nonatomic) __kindof UIView* webView;
 
@@ -21,7 +23,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self.view addSubview:self.webView];
-    [(UIWebView*)self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://game.mailizc.com"]];
+//    http://www.wenfangba.com?appType=isApp
+    
+    [(WFWebView*)self.webView loadRequest:request];
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -31,6 +37,8 @@
     [[WKWebsiteDataStore defaultDataStore] removeDataOfTypes:types modifiedSince:[NSDate dateWithTimeIntervalSince1970:0] completionHandler:^{}];
 }
 
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -39,11 +47,24 @@
 #pragma mark - WKNavigationDelegate
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-    [webView evaluateJavaScript:@"document.title" completionHandler:^(id _Nullable result, NSError * _Nullable error) {
-        if ([result isKindOfClass:[NSString class]]) {
-            self.title = result;
-        }
-    }];
+    
+
+    
+    NSLog(@"didFinishNavigation");
+}
+
+-(void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
+    
+   
+    NSLog(@"didStartProvisionalNavigation");
+}
+
+
+
+-(void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
+    NSDictionary *dict = message.body;
+    NSLog(@"body:%@",dict);
+    
 }
 
 #pragma mark - UIWebViewDelegate
@@ -56,8 +77,30 @@
 
 - (UIView *)webView {
     if (!_webView) {
-        _webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
-        _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        
+        
+        //1.创建配置项
+        WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
+        config.selectionGranularity = WKSelectionGranularityDynamic;
+        
+        //1.1 设置偏好
+        config.preferences = [[WKPreferences alloc] init];
+        config.preferences.minimumFontSize = 10;
+        config.preferences.javaScriptEnabled = YES;
+        //1.1.1 默认是不能通过JS自动打开窗口的，必须通过用户交互才能打开
+        config.preferences.javaScriptCanOpenWindowsAutomatically = NO;
+        config.processPool = [[WKProcessPool alloc] init];
+        
+        //1.2 通过JS与webview内容交互配置
+        config.userContentController = [[WKUserContentController alloc] init];
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+        
+        [config.userContentController addScriptMessageHandler:self name:@"webViewApp"];
+        //2.添加WKWebView
+        _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, [UIApplication sharedApplication].keyWindow.bounds.size.width, [UIApplication sharedApplication].keyWindow.bounds.size.height) configuration:config];
+        _webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth ;
+        
+        
         
         if ([_webView respondsToSelector:@selector(setNavigationDelegate:)]) {
             [_webView setNavigationDelegate:self];

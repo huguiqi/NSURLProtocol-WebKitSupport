@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2296559C1EE94A4F00606AE8 /* WFWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2296559B1EE94A4F00606AE8 /* WFWebView.m */; };
+		229655A01EE96DD000606AE8 /* NSHTTPCookie+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2296559F1EE96DD000606AE8 /* NSHTTPCookie+Utils.m */; };
+		22F8AB831EEA7F5A000EB9FF /* NSString+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F8AB821EEA7F5A000EB9FF /* NSString+JSON.m */; };
+		22F8AB921EEAC005000EB9FF /* NSString+CDEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F8AB861EEAC005000EB9FF /* NSString+CDEncryption.m */; };
+		22F8AB931EEAC005000EB9FF /* NSURLRequest+MutableCopyWorkaround.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F8AB881EEAC005000EB9FF /* NSURLRequest+MutableCopyWorkaround.m */; };
+		22F8AB951EEAC005000EB9FF /* SCYCacheURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F8AB8D1EEAC005000EB9FF /* SCYCacheURLProtocol.m */; };
+		22F8AB961EEAC005000EB9FF /* SCYLoanHTMLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F8AB8F1EEAC005000EB9FF /* SCYLoanHTMLCache.m */; };
+		22F8AB971EEAC005000EB9FF /* SCYWebViewCacheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F8AB911EEAC005000EB9FF /* SCYWebViewCacheModel.m */; };
+		22F8AB9D1EEB8F33000EB9FF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F8AB9C1EEB8F33000EB9FF /* Reachability.m */; };
 		3802E0851DACE4C9008B9737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3802E0841DACE4C9008B9737 /* main.m */; };
 		3802E0881DACE4C9008B9737 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3802E0871DACE4C9008B9737 /* AppDelegate.m */; };
 		3802E08B1DACE4C9008B9737 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3802E08A1DACE4C9008B9737 /* ViewController.m */; };
@@ -17,9 +26,29 @@
 		3802E0A01DACE5C5008B9737 /* ReplacingImageURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 3802E09F1DACE5C5008B9737 /* ReplacingImageURLProtocol.m */; };
 		3802E0A21DACE663008B9737 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 3802E0A11DACE663008B9737 /* image.png */; };
 		3802E0A51DACEEF8008B9737 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3802E0A41DACEEF8008B9737 /* RootViewController.m */; };
+		973F4CC156589BBBD421E2A6 /* libPods-NSURLProtocol+WebKitSupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0856B794F912D55A586F7BEF /* libPods-NSURLProtocol+WebKitSupport.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0856B794F912D55A586F7BEF /* libPods-NSURLProtocol+WebKitSupport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSURLProtocol+WebKitSupport.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2296559A1EE94A4F00606AE8 /* WFWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFWebView.h; sourceTree = "<group>"; };
+		2296559B1EE94A4F00606AE8 /* WFWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFWebView.m; sourceTree = "<group>"; };
+		2296559E1EE96DD000606AE8 /* NSHTTPCookie+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSHTTPCookie+Utils.h"; sourceTree = "<group>"; };
+		2296559F1EE96DD000606AE8 /* NSHTTPCookie+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPCookie+Utils.m"; sourceTree = "<group>"; };
+		22F8AB811EEA7F5A000EB9FF /* NSString+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JSON.h"; sourceTree = "<group>"; };
+		22F8AB821EEA7F5A000EB9FF /* NSString+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JSON.m"; sourceTree = "<group>"; };
+		22F8AB851EEAC005000EB9FF /* NSString+CDEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CDEncryption.h"; sourceTree = "<group>"; };
+		22F8AB861EEAC005000EB9FF /* NSString+CDEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CDEncryption.m"; sourceTree = "<group>"; };
+		22F8AB871EEAC005000EB9FF /* NSURLRequest+MutableCopyWorkaround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+MutableCopyWorkaround.h"; sourceTree = "<group>"; };
+		22F8AB881EEAC005000EB9FF /* NSURLRequest+MutableCopyWorkaround.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+MutableCopyWorkaround.m"; sourceTree = "<group>"; };
+		22F8AB8C1EEAC005000EB9FF /* SCYCacheURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCYCacheURLProtocol.h; sourceTree = "<group>"; };
+		22F8AB8D1EEAC005000EB9FF /* SCYCacheURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCYCacheURLProtocol.m; sourceTree = "<group>"; };
+		22F8AB8E1EEAC005000EB9FF /* SCYLoanHTMLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCYLoanHTMLCache.h; sourceTree = "<group>"; };
+		22F8AB8F1EEAC005000EB9FF /* SCYLoanHTMLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCYLoanHTMLCache.m; sourceTree = "<group>"; };
+		22F8AB901EEAC005000EB9FF /* SCYWebViewCacheModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCYWebViewCacheModel.h; sourceTree = "<group>"; };
+		22F8AB911EEAC005000EB9FF /* SCYWebViewCacheModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCYWebViewCacheModel.m; sourceTree = "<group>"; };
+		22F8AB9B1EEB8F33000EB9FF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		22F8AB9C1EEB8F33000EB9FF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		3802E0801DACE4C9008B9737 /* NSURLProtocol+WebKitSupport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NSURLProtocol+WebKitSupport.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3802E0841DACE4C9008B9737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3802E0861DACE4C9008B9737 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,6 +66,8 @@
 		3802E0A11DACE663008B9737 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		3802E0A31DACEEF8008B9737 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		3802E0A41DACEEF8008B9737 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		B2771A5A5482093AE65644C2 /* Pods-NSURLProtocol+WebKitSupport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSURLProtocol+WebKitSupport.release.xcconfig"; path = "Pods/Target Support Files/Pods-NSURLProtocol+WebKitSupport/Pods-NSURLProtocol+WebKitSupport.release.xcconfig"; sourceTree = "<group>"; };
+		EF4DDAE6F85B22615054AA78 /* Pods-NSURLProtocol+WebKitSupport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSURLProtocol+WebKitSupport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NSURLProtocol+WebKitSupport/Pods-NSURLProtocol+WebKitSupport.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,18 +75,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				973F4CC156589BBBD421E2A6 /* libPods-NSURLProtocol+WebKitSupport.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22F8AB841EEAC005000EB9FF /* categary */ = {
+			isa = PBXGroup;
+			children = (
+				22F8AB851EEAC005000EB9FF /* NSString+CDEncryption.h */,
+				22F8AB861EEAC005000EB9FF /* NSString+CDEncryption.m */,
+				22F8AB871EEAC005000EB9FF /* NSURLRequest+MutableCopyWorkaround.h */,
+				22F8AB881EEAC005000EB9FF /* NSURLRequest+MutableCopyWorkaround.m */,
+			);
+			path = categary;
+			sourceTree = "<group>";
+		};
+		22F8AB891EEAC005000EB9FF /* LoanCacheTool */ = {
+			isa = PBXGroup;
+			children = (
+				22F8AB9B1EEB8F33000EB9FF /* Reachability.h */,
+				22F8AB9C1EEB8F33000EB9FF /* Reachability.m */,
+				22F8AB8C1EEAC005000EB9FF /* SCYCacheURLProtocol.h */,
+				22F8AB8D1EEAC005000EB9FF /* SCYCacheURLProtocol.m */,
+				22F8AB8E1EEAC005000EB9FF /* SCYLoanHTMLCache.h */,
+				22F8AB8F1EEAC005000EB9FF /* SCYLoanHTMLCache.m */,
+				22F8AB901EEAC005000EB9FF /* SCYWebViewCacheModel.h */,
+				22F8AB911EEAC005000EB9FF /* SCYWebViewCacheModel.m */,
+			);
+			path = LoanCacheTool;
+			sourceTree = "<group>";
+		};
 		3802E0771DACE4C9008B9737 = {
 			isa = PBXGroup;
 			children = (
 				3802E0821DACE4C9008B9737 /* NSURLProtocol+WebKitSupport */,
 				3802E09D1DACE54A008B9737 /* Source */,
 				3802E0811DACE4C9008B9737 /* Products */,
+				677C7399927B412C7415C63A /* Pods */,
+				823D9F23BFA0454F6BF87220 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +130,8 @@
 		3802E0821DACE4C9008B9737 /* NSURLProtocol+WebKitSupport */ = {
 			isa = PBXGroup;
 			children = (
+				22F8AB841EEAC005000EB9FF /* categary */,
+				22F8AB891EEAC005000EB9FF /* LoanCacheTool */,
 				3802E0861DACE4C9008B9737 /* AppDelegate.h */,
 				3802E0871DACE4C9008B9737 /* AppDelegate.m */,
 				3802E0891DACE4C9008B9737 /* ViewController.h */,
@@ -84,6 +146,12 @@
 				3802E0911DACE4C9008B9737 /* LaunchScreen.storyboard */,
 				3802E0941DACE4C9008B9737 /* Info.plist */,
 				3802E0831DACE4C9008B9737 /* Supporting Files */,
+				2296559A1EE94A4F00606AE8 /* WFWebView.h */,
+				2296559B1EE94A4F00606AE8 /* WFWebView.m */,
+				2296559E1EE96DD000606AE8 /* NSHTTPCookie+Utils.h */,
+				2296559F1EE96DD000606AE8 /* NSHTTPCookie+Utils.m */,
+				22F8AB811EEA7F5A000EB9FF /* NSString+JSON.h */,
+				22F8AB821EEA7F5A000EB9FF /* NSString+JSON.m */,
 			);
 			path = "NSURLProtocol+WebKitSupport";
 			sourceTree = "<group>";
@@ -105,6 +173,23 @@
 			name = Source;
 			sourceTree = "<group>";
 		};
+		677C7399927B412C7415C63A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF4DDAE6F85B22615054AA78 /* Pods-NSURLProtocol+WebKitSupport.debug.xcconfig */,
+				B2771A5A5482093AE65644C2 /* Pods-NSURLProtocol+WebKitSupport.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		823D9F23BFA0454F6BF87220 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0856B794F912D55A586F7BEF /* libPods-NSURLProtocol+WebKitSupport.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3802E0971DACE4C9008B9737 /* Build configuration list for PBXNativeTarget "NSURLProtocol+WebKitSupport" */;
 			buildPhases = (
+				A230443A7F577F3E43B4680C /* [CP] Check Pods Manifest.lock */,
 				3802E07C1DACE4C9008B9737 /* Sources */,
 				3802E07D1DACE4C9008B9737 /* Frameworks */,
 				3802E07E1DACE4C9008B9737 /* Resources */,
+				14F9BA7B46D50D71F7EA9F65 /* [CP] Embed Pods Frameworks */,
+				E7CFDE3EEB4BDA7056255CF6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,7 +219,7 @@
 		3802E0781DACE4C9008B9737 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Yeatse;
 				TargetAttributes = {
 					3802E07F1DACE4C9008B9737 = {
@@ -173,17 +261,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		14F9BA7B46D50D71F7EA9F65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NSURLProtocol+WebKitSupport/Pods-NSURLProtocol+WebKitSupport-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A230443A7F577F3E43B4680C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E7CFDE3EEB4BDA7056255CF6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NSURLProtocol+WebKitSupport/Pods-NSURLProtocol+WebKitSupport-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3802E07C1DACE4C9008B9737 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22F8AB951EEAC005000EB9FF /* SCYCacheURLProtocol.m in Sources */,
+				22F8AB961EEAC005000EB9FF /* SCYLoanHTMLCache.m in Sources */,
 				3802E09C1DACE546008B9737 /* NSURLProtocol+WebKitSupport.m in Sources */,
+				2296559C1EE94A4F00606AE8 /* WFWebView.m in Sources */,
 				3802E0A01DACE5C5008B9737 /* ReplacingImageURLProtocol.m in Sources */,
 				3802E0A51DACEEF8008B9737 /* RootViewController.m in Sources */,
+				22F8AB831EEA7F5A000EB9FF /* NSString+JSON.m in Sources */,
 				3802E08B1DACE4C9008B9737 /* ViewController.m in Sources */,
+				22F8AB931EEAC005000EB9FF /* NSURLRequest+MutableCopyWorkaround.m in Sources */,
 				3802E0881DACE4C9008B9737 /* AppDelegate.m in Sources */,
+				22F8AB9D1EEB8F33000EB9FF /* Reachability.m in Sources */,
+				229655A01EE96DD000606AE8 /* NSHTTPCookie+Utils.m in Sources */,
 				3802E0851DACE4C9008B9737 /* main.m in Sources */,
+				22F8AB921EEAC005000EB9FF /* NSString+CDEncryption.m in Sources */,
+				22F8AB971EEAC005000EB9FF /* SCYWebViewCacheModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +372,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -275,6 +421,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -301,6 +448,7 @@
 		};
 		3802E0981DACE4C9008B9737 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF4DDAE6F85B22615054AA78 /* Pods-NSURLProtocol+WebKitSupport.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TJT2HAB95B;
@@ -313,6 +461,7 @@
 		};
 		3802E0991DACE4C9008B9737 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2771A5A5482093AE65644C2 /* Pods-NSURLProtocol+WebKitSupport.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TJT2HAB95B;
